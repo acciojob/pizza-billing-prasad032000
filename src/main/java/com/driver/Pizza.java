@@ -37,9 +37,14 @@ public class Pizza {
         ans+="Extra Toppings Added: "+extraToppings+"\n";
     }
 
+    boolean isPaperBagAdded=false;
     public void addTakeaway(){
-        price+=20;
-        ans+="Paperbag Added: 20"+"\n";
+        if(!isPaperBagAdded){
+            price+=20;
+            isPaperBagAdded=true;
+            ans+="Paperbag Added: 20"+"\n";
+        }
+
     }
 
     public String getBill(){
